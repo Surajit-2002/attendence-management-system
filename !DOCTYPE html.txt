@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Attendance Management System</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- Header / Navbar -->
+  <header class="bg-blue-700 text-white py-4 sticky top-0 z-50 shadow-md">
+    <div class="max-w-7xl mx-auto flex justify-between items-center px-4">
+      <h1 class="text-2xl font-bold">Online Attendance Management System</h1>
+      <nav class="space-x-6 text-sm font-medium">
+        <a href="#overview" class="hover:text-yellow-300">Overview</a>
+        <a href="#features" class="hover:text-yellow-300">Features</a>
+        <a href="#roles" class="hover:text-yellow-300">User Roles</a>
+        <a href="#login" class="hover:text-yellow-300">Login</a>
+        <a href="#dashboard" class="hover:text-yellow-300">Dashboard</a>
+        <a href="#demo" class="hover:text-yellow-300">Demo Info</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-20 text-center">
+    <h2 class="text-4xl font-bold mb-4">Smart Attendance Management</h2>
+    <p class="text-lg mb-6">Automate attendance tracking for Offices, Faculty, and Students.</p>
+    <a href="#login" class="bg-yellow-400 text-gray-900 px-6 py-3 rounded-lg font-semibold hover:bg-yellow-300 transition">Try Now</a>
+  </section>
+
+  <!-- Overview -->
+  <section id="overview" class="py-16 max-w-6xl mx-auto px-4">
+    <h2 class="text-3xl font-bold mb-4 text-blue-700">System Overview</h2>
+    <p class="text-gray-700 leading-relaxed text-justify">
+      The <strong>Online Attendance Management System (OAMS)</strong> is a web-based platform designed to replace manual attendance tracking with an automated digital system.
+      It simplifies the workflow for administrators, faculty, and students by providing separate login portals and dashboards.
+      This ensures accuracy, transparency, and efficiency in attendance management.
+    </p>
+  </section>
+
+  <!-- Features -->
+  <section id="features" class="py-16 bg-white max-w-6xl mx-auto px-4">
+    <h2 class="text-3xl font-bold mb-8 text-blue-700 text-center">Key Features</h2>
+    <div class="grid md:grid-cols-3 gap-8 text-center">
+      <div class="bg-blue-50 p-6 rounded-2xl shadow hover:shadow-lg transition">
+        <img src="https://img.icons8.com/color/96/data-configuration.png" class="mx-auto mb-4" alt="Centralized Data">
+        <h3 class="text-lg font-semibold mb-2">Centralized Database</h3>
+        <p class="text-gray-600 text-sm">Unified data access for all users — reducing redundancy and improving reliability.</p>
+      </div>
+      <div class="bg-blue-50 p-6 rounded-2xl shadow hover:shadow-lg transition">
+        <img src="https://img.icons8.com/color/96/approval.png" class="mx-auto mb-4" alt="Easy Attendance">
+        <h3 class="text-lg font-semibold mb-2">Instant Attendance</h3>
+        <p class="text-gray-600 text-sm">Faculty can mark attendance with a single click for each class or session.</p>
+      </div>
+      <div class="bg-blue-50 p-6 rounded-2xl shadow hover:shadow-lg transition">
+        <img src="https://img.icons8.com/color/96/bar-chart.png" class="mx-auto mb-4" alt="Reports">
+        <h3 class="text-lg font-semibold mb-2">Real-time Reports</h3>
+        <p class="text-gray-600 text-sm">Generate attendance reports dynamically with visual analytics.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Roles -->
+  <section id="roles" class="py-16 bg-gray-100 max-w-6xl mx-auto px-4">
+    <h2 class="text-3xl font-bold mb-8 text-blue-700 text-center">User Roles and Responsibilities</h2>
+    <div class="grid md:grid-cols-3 gap-8">
+
+      <!-- Office -->
+      <div class="bg-white rounded-2xl shadow-lg p-6 text-center hover:shadow-2xl transition">
+        <img src="https://img.icons8.com/color/96/office.png" alt="Office User" class="mx-auto mb-4">
+        <h3 class="text-xl font-semibold mb-2 text-blue-700">Office User</h3>
+        <p class="text-gray-600 text-sm">
+          Can manage faculty and student records, verify attendance data, and generate overall reports for the institution.
+        </p>
+      </div>
+
+      <!-- Faculty -->
+      <div class="bg-white rounded-2xl shadow-lg p-6 text-center hover:shadow-2xl transition">
+        <img src="https://img.icons8.com/color/96/teacher.png" alt="Faculty User" class="mx-auto mb-4">
+        <h3 class="text-xl font-semibold mb-2 text-green-600">Faculty User</h3>
+        <p class="text-gray-600 text-sm">
+          Can mark attendance, update student records, and view attendance performance for their classes.
+        </p>
+      </div>
+
+      <!-- Student -->
+      <div class="bg-white rounded-2xl shadow-lg p-6 text-center hover:shadow-2xl transition">
+        <img src="https://img.icons8.com/color/96/student-center.png" alt="Student User" class="mx-auto mb-4">
+        <h3 class="text-xl font-semibold mb-2 text-purple-600">Student User</h3>
+        <p class="text-gray-600 text-sm">
+          Can log in to check attendance, view percentage reports, and track subjects with low attendance.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Login Section -->
+  <section id="login" class="py-16 bg-white max-w-6xl mx-auto px-4">
+    <h2 class="text-3xl font-bold mb-8 text-blue-700 text-center">Login Access (Demo)</h2>
+    <div class="grid md:grid-cols-3 gap-8 text-center">
+      <div class="bg-gray-50 p-6 rounded-xl shadow hover:shadow-lg transition">
+        <h3 class="font-semibold text-lg text-blue-600 mb-4">Office Login</h3>
+        <p class="text-sm text-gray-600 mb-2">Username: <strong>office</strong></p>
+        <p class="text-sm text-gray-600 mb-4">Password: <strong>12345</strong></p>
+        <a href="#" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">Login</a>
+      </div>
+
+      <div class="bg-gray-50 p-6 rounded-xl shadow hover:shadow-lg transition">
+        <h3 class="font-semibold text-lg text-green-600 mb-4">Faculty Login</h3>
+        <p class="text-sm text-gray-600 mb-2">Username: <strong>faculty</strong></p>
+        <p class="text-sm text-gray-600 mb-4">Password: <strong>12345</strong></p>
+        <a href="#" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition">Login</a>
+      </div>
+
+      <div class="bg-gray-50 p-6 rounded-xl shadow hover:shadow-lg transition">
+        <h3 class="font-semibold text-lg text-purple-600 mb-4">Student Login</h3>
+        <p class="text-sm text-gray-600 mb-2">Username: <strong>student</strong></p>
+        <p class="text-sm text-gray-600 mb-4">Password: <strong>12345</strong></p>
+        <a href="#" class="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700 transition">Login</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dashboard Preview -->
+  <section id="dashboard" class="py-16 bg-gray-100 max-w-6xl mx-auto px-4">
+    <h2 class="text-3xl font-bold mb-8 text-blue-700 text-center">Dashboard Preview</h2>
+
+    <!-- Attendance Table -->
+    <div class="bg-white rounded-2xl shadow-lg p-6 overflow-x-auto mb-10">
+      <h3 class="text-xl font-semibold text-gray-700 mb-4">Sample Attendance Table</h3>
+      <table class="w-full border-collapse border border-gray-200 text-sm">
+        <thead class="bg-blue-50">
+          <tr>
+            <th class="border p-2">Roll No</th>
+            <th class="border p-2">Name</th>
+            <th class="border p-2">Subject</th>
+            <th class="border p-2">Total Classes</th>
+            <th class="border p-2">Attended</th>
+            <th class="border p-2">Percentage</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="text-center">
+            <td class="border p-2">101</td>
+            <td class="border p-2">Amit Kumar</td>
+            <td class="border p-2">Mathematics</td>
+            <td class="border p-2">40</td>
+            <td class="border p-2">36</td>
+            <td class="border p-2 text-green-600 font-semibold">90%</td>
+          </tr>
+          <tr class="text-center">
+            <td class="border p-2">102</td>
+            <td class="border p-2">Priya Das</td>
+            <td class="border p-2">Science</td>
+            <td class="border p-2">40</td>
+            <td class="border p-2">30</td>
+            <td class="border p-2 text-yellow-600 font-semibold">75%</td>
+          </tr>
+          <tr class="text-center">
+            <td class="border p-2">103</td>
+            <td class="border p-2">Rahul Singh</td>
+            <td class="border p-2">English</td>
+            <td class="border p-2">40</td>
+            <td class="border p-2">28</td>
+            <td class="border p-2 text-red-600 font-semibold">70%</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Attendance Chart -->
+    <div class="bg-white rounded-2xl shadow-lg p-6">
+      <h3 class="text-xl font-semibold text-gray-700 mb-4">Attendance Analytics</h3>
+      <canvas id="attendanceChart"></canvas>
+    </div>
+  </section>
+
+  <!-- Demo Info -->
+  <section id="demo" class="py-16 bg-white text-center">
+    <h2 class="text-3xl font-bold mb-4 text-blue-700">Demo Information</h2>
+    <p class="max-w-3xl mx-auto text-gray-700 mb-8">
+      This webpage is a detailed front-end prototype of a digital attendance management system.
+      Built using <strong>HTML</strong>, <strong>Tailwind CSS</strong>, and <strong>Chart.js</strong>, 
+      it demonstrates a realistic interface for Office, Faculty, and Student users.
+      You can integrate it with a backend (like Node.js, PHP, or Firebase) to make it fully functional.
+    </p>
+    <a href="#top" class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition">Back to Top</a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white text-center py-4">
+    <p class="text-sm">&copy; 2025 Online Attendance Management System | Designed by <strong>Surajit Debnath</strong></p>
+  </footer>
+
+  <script>
+    // Chart.js Demo
+    const ctx = document.getElementById('attendanceChart').getContext('2d');
+    new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['Amit Kumar', 'Priya Das', 'Rahul Singh'],
+        datasets: [{
+          label: 'Attendance (%)',
+          data: [90, 75, 70],
+          backgroundColor: ['#22c55e', '#eab308', '#ef4444'],
+        }]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true,
+            max: 100
+          }
+        }
+      }
+    });
+  </script>
+
+</body>
+</html>
